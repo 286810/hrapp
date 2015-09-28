@@ -1,0 +1,36 @@
+<ion-view view-title="江湖救急">
+  <ion-content id="publish_heal">
+    <form name="healForm" class="margin40-top padding">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">任务名称</span>
+          <input type="text" name="name" ng-model="task.name" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">任务城市</span>
+          <input type="text" name="city" ng-model="task.city" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">任务时效</span>
+          <input type="text" name="timeEfficiency" ng-model="task.timeEfficiency" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">任务描述</span>
+          <textarea type="text" name="description" ng-model="task.description" required></textarea>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">赏金</span>
+          <input type="number" name="reward" ng-model="task.reward" required>
+        </label>
+      </div>
+
+      <button ng-click="heal(healForm)" class="button button-block button-assertive"
+              ng-disabled="healForm.$invalid || !task.mode">
+        发布
+      </button>
+      <a href="#/tab/home/recommend" class="button button-block button-assertive" >
+        取消
+      </a>
+    </form>
+  </ion-content>
+</ion-view>

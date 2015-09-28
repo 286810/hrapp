@@ -1,0 +1,25 @@
+<ion-view>
+
+  <div ng-if="!showOrDetail" class="tabs-striped tabs-top tabs-background-stable tabs-color-assertive">
+    <div id="order-subheader" class="item tabs tabs-secondary subheader">
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/manageOrder/all'}" href="#/tab/manageOrder/all">
+        全部
+      </a>
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/manageOrder/response'}" href="#/tab/manageOrder/response">
+        已响应
+      </a>
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/manageOrder/underway'}" href="#/tab/manageOrder/underway">
+        进行中
+      </a>
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/manageOrder/cancel'}" href="#/tab/manageOrder/cancel">
+        已取消
+      </a>
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/manageOrder/store'}" href="#/tab/manageOrder/store">
+        已收藏
+      </a>
+    </div>
+  </div>
+
+  <ion-nav-view name="order"></ion-nav-view>
+
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view>
+    <!--<div class="bar bar-header bar-assertive">-->
+        <!--<h1 class="title">资讯</h1>-->
+    <!--</div>-->
+    <div class="tabs-striped tabs-top tabs-background-stable tabs-color-assertive">
+        <div ng-if="!showDetail" id="news-subheader" class="item tabs tabs-secondary">
+            <a class="tab-item" ng-class="{'active': currentLocation=='/tab/news/dynamic'}" href="#/tab/news/dynamic">
+                行业动态
+            </a>
+            <a class="tab-item" ng-class="{'active': currentLocation=='/tab/news/bid'}" href="#/tab/news/bid">
+                招标投标
+            </a>
+            <a class="tab-item" ng-class="{'active': currentLocation=='/tab/news/activity'}" href="#/tab/news/activity">
+                近期活动
+            </a>
+            <a class="tab-item" ng-class="{'active': currentLocation=='/tab/news/classroom'}" href="#/tab/news/classroom">
+                红人课堂
+            </a>
+        </div>
+    </div>
+
+    <ion-nav-view name="news"></ion-nav-view>
+
+</ion-view>

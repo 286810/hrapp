@@ -1,0 +1,52 @@
+<ion-view view-title="从业信息">
+  <ion-content id="jobinfo">
+
+    <div class="list margin20-top padding">
+      <div class="energized text-center padding">------------选填------------</div>
+      <label class="item item-input">
+        <span class="input-label">任职公司</span>
+        <input type="text" name="company" ng-model="user.company" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">任职时间</span>
+        <input type="date" name="job_time" ng-model="user.job_time" required="">
+      </label>
+      <div ng-click="selectDoctor()" class="item item-input">
+        <span class="input-label">负责区域、医院、药店</span>
+        <input class="text-left disable_input job_responsible_location" type="text" disabled ng-model="user.job_responsible_location"
+               name="job_responsible_location" required="">
+      </div>
+      <div ng-click="select()" class="item item-input">
+        <span class="input-label">主要科室</span>
+        <input class="text-left disable_input job_department" type="text" disabled ng-model="user.job_department"
+               name="job_department" required="">
+      </div>
+    </div>
+    <form name="jobForm" class="padding">
+      <div class="list">
+        <div class="positive text-center padding">------------必填------------</div>
+        <div ng-click="select()" class="item item-input">
+          <span class="input-label">擅长区域、医院、药店</span>
+          <input class="text-left disable_input goodat_location" type="text" disabled ng-model="user.goodat_location"
+                 name="goodat_location" required="">
+        </div>
+        <div ng-click="select()" class="item item-input">
+          <span class="input-label">擅长科室</span>
+          <input class="text-left disable_input goodat_department" type="text" disabled ng-model="user.goodat_department"
+                 name="goodat_department" required="">
+        </div>
+      </div>
+
+      <p class="text-center">
+        信息完善度 <span ng-if="basicForm.$valid">80</span><span ng-if="!basicForm.$valid">50</span>%
+      </p>
+      <button ng-click="finishBasic(employForm)" class="button button-block button-assertive"
+              ng-disabled="jobForm.$invalid">
+        完成
+      </button>
+      <div class="text-right">
+        <a href="#/authentication" class="button-small button button-clear">跳过</a>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

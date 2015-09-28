@@ -1,0 +1,66 @@
+<ion-view view-title="科室会">
+  <ion-content id="publish_department">
+    <form name="departmentForm" class="margin40-top padding">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">注册证名称</span>
+          <input type="text" name="phone" ng-model="task.regcard" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+          <input type="text" name="standard" ng-model="task.standard" required="">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">任务医院</span>
+          <input type="text" name="hospital" ng-model="task.hospital" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">任务科室</span>
+          <input type="text" name="department" ng-model="task.department" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">会议时间</span>
+          <input type="time" name="meetTime" ng-model="task.meetTime" required>
+        </label>
+
+        <div class="item tag">
+          <span class="input-label">标签</span>
+          <ion-radio name="tag1" ng-model="task.tag1" ng-value="'进口'">进口</ion-radio>
+          <ion-radio name="tag1" ng-model="task.tag1" ng-value="'国产'">国产</ion-radio>
+          <ion-radio name="tag2" ng-model="task.tag2" ng-value="'原研'">原研</ion-radio>
+          <ion-radio name="tag2" ng-model="task.tag2" ng-value="'仿制'">仿制</ion-radio>
+          <ion-radio name="tag3" ng-model="task.tag3" ng-value="'自费'">自费</ion-radio>
+          <ion-radio name="tag3" ng-model="task.tag3" ng-value="'医保'">医保</ion-radio>
+        </div>
+        <div class="item mode">
+          <span class="input-label">赏金起拿标准和方式</span>
+          <ion-radio ng-model="task.mode" ng-value="'组织科室会'" ng-click="show_dpt = !show_dpt">组织科室会</ion-radio>
+          <label ng-if="show_dpt" class="item item-input">
+            <input amend-number type="number" data-minnum="200" placeholder="200起,100步长">
+          </label>
+          <ion-radio ng-model="task.mode" ng-value="'讲解 ppt'" ng-click="show_ppt = !show_ppt">讲解 ppt</ion-radio>
+          <label ng-if="show_ppt" class="item item-input">
+            <input amend-number type="number" data-minnum="300" placeholder="300起,100步长">
+          </label>
+          <ion-radio ng-model="task.mode" ng-value="'产品演示'" ng-click="show_demo = !show_demo">产品演示</ion-radio>
+          <label ng-if="show_demo" class="item item-input">
+            <input amend-number type="number" data-minnum="200" placeholder="200起,100步长">
+          </label>
+        </div>
+
+        <label class="item item-input">
+          <span class="input-label">赏金</span>
+          <input type="number" name="reward" ng-model="task.reward" required>
+        </label>
+      </div>
+
+      <button ng-click="department(departmentForm)" class="button button-block button-assertive"
+              ng-disabled="departmentForm.$invalid || !task.mode">
+        发布
+      </button>
+      <a href="#/tab/home/recommend" class="button button-block button-assertive" >
+        取消
+      </a>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="会话">
+  <ion-content id="msg-chat">
+    <div class="list">
+      <div ng-repeat="item in chatData" class="item " ng-class="{ 'item-thumbnail-left': item.pos=='left', 'item-thumbnail-right': item.pos=='right',
+                                     'text-right': item.pos=='right'}">
+        <img class="header" ng-src="{{item.img}}" >
+        <!--<h2>小红</h2>-->
+        <p>{{item.content}}</p>
+      </div>
+      <!--<div class="item item-thumbnail-right">
+        <img class="header" ng-src="./img/hotman-2.jpg" >
+        &lt;!&ndash;<h2>小明</h2>&ndash;&gt;
+        <p>你看到我了吗！</p>
+      </div>-->
+
+    </div>
+  </ion-content>
+  <div class="bar bar-footer item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="search" ng-model="chat.content">
+    </label>
+    <button ng-click="sendMsg()" class="button button-positive button-clear">
+      发送
+    </button>
+  </div>
+</ion-view>

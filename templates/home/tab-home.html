@@ -1,0 +1,62 @@
+<ion-view>
+  <div class="bar bar-header bar-assertive">
+    <a href="#/login" class="button button-clear">登录</a>
+
+    <h1 class="title">首页</h1>
+    <button class="button button-clear">
+      <i class="icon ion-ios-search" ></i>
+    </button>
+  </div>
+  <!--<div class="tabs-striped tabs-top has-header">
+      <div class="item tabs tabs-secondary tabs-color-active-assertive">
+          <a class="tab-item active" href="#/tab/home/recommend">
+              智能推荐
+          </a>
+          <a class="tab-item" href="#/tab/home/hottask">
+              热度任务
+          </a>
+          <a class="tab-item" href="#/tab/home/hotman">
+              热度红人
+          </a>
+      </div>
+  </div>-->
+  <div class="tabs-striped tabs-top tabs-background-stable tabs-color-assertive">
+    <div id="home-subheader" class="tabs tabs-secondary" ng-if="!show.recommendItemActive">
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/home/hottask'}" href="#/tab/home/hottask">
+        热度任务
+      </a>
+      <a drop-down ng-click="show.rmd_menu = !show.rmd_menu" class="drop-menu tab-item" ng-class="{'active': currentLocation=='/tab/home/recommend'}" >
+        智能推荐 <span class="ion ion-ios-arrow-down drop-menu-ion" ng-class="{'active': show.rmd_menu}"></span>
+      </a>
+      <ul class="drop-content light-bg" ng-class="{'active': show.rmd_menu}">
+        <li ng-click="show.rmd_menu = !show.rmd_menu" class="text-center">
+          <a class="dark" href="#/tab/home/recommend">江湖救急</a>
+        </li>
+        <li ng-click="show.rmd_menu = !show.rmd_menu" class="text-center">
+          <a class="dark" href="#/tab/home/recommend">上量</a>
+        </li>
+        <li ng-click="show.rmd_menu = !show.rmd_menu" class="text-center">
+          <a class="dark" href="#/tab/home/recommend">进院</a>
+        </li>
+        <li ng-click="show.rmd_menu = !show.rmd_menu" class="text-center">
+          <a class="dark" href="#/tab/home/recommend">科室会</a>
+        </li>
+        <li ng-click="show.rmd_menu = !show.rmd_menu" class="text-center">
+          <a class="dark" href="#/tab/home/recommend">提单</a>
+        </li>
+        <li ng-click="show.rmd_menu = !show.rmd_menu" class="text-center">
+          <a class="dark" href="#/tab/home/recommend">其他</a>
+        </li>
+      </ul>
+      <a class="tab-item" ng-class="{'active': currentLocation=='/tab/home/hotman'}" href="#/tab/home/hotman">
+        热度红人
+      </a>
+      <!--<a class="tab-item" ng-class="{'active': currentLocation=='/tab/home/search'}" href="#/tab/home/search">
+        <i class="icon ion-ios-search" ></i>
+      </a>-->
+    </div>
+  </div>
+
+  <ion-nav-view name="home" id="home"></ion-nav-view>
+
+</ion-view>

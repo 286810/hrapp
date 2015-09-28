@@ -1,0 +1,59 @@
+<ion-view hide-nav-bar="true">
+
+  <ion-content class="has-tabs-top" id="home-hottask">
+        <ion-list ng-controller="MyCtrl" can-swipe="listCanSwipe">
+          <ion-item class="item-thumbnail-right" >
+            <img ng-src="./img/ionic.png">
+            <h2 class="price assertive text-center">￥3000</h2>
+            <p class="padding-top">
+              <span class="dark">产品名称：阿莫西林</span>
+            </p>
+            <p>
+              <span class="dark">规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：20 * 5g</span>
+            </p>
+            <p>
+              <span class="dark">医&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院：江苏省人民医院</span>
+            </p>
+            <p>
+              <span class="dark">零&nbsp;&nbsp;售&nbsp;&nbsp;价：￥300</span>
+            </p>
+          </ion-item>
+
+          <ion-item class="item-thumbnail-right" >
+            <img ng-src="./img/ionic.png">
+            <h2 class="price assertive text-center">￥3000</h2>
+            <p class="padding-top">
+              <span class="dark">产品名称：阿莫西林</span>
+            </p>
+            <p>
+              <span class="dark">规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：20 * 5g</span>
+            </p>
+            <p>
+              <span class="dark">医&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院：江苏省人民医院</span>
+            </p>
+            <p>
+              <span class="dark">零&nbsp;&nbsp;售&nbsp;&nbsp;价：￥300</span>
+            </p>
+          </ion-item>
+
+          <ion-item class="item-thumbnail-right" >
+            <img ng-src="./img/ionic.png">
+            <h2 class="price assertive text-center">￥3000</h2>
+            <p class="padding-top">
+              <span class="dark">产品名称：阿莫西林</span>
+            </p>
+            <p>
+              <span class="dark">规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：20 * 5g</span>
+            </p>
+            <p>
+              <span class="dark">医&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院：江苏省人民医院</span>
+            </p>
+            <p>
+              <span class="dark">零&nbsp;&nbsp;售&nbsp;&nbsp;价：￥300</span>
+            </p>
+          </ion-item>
+        </ion-list>
+        <ion-infinite-scroll ng-if="isMoreData" on-infinite="loadMore()" spinner="circles" ></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

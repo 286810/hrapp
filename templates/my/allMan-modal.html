@@ -1,0 +1,39 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-assertive">
+    <button ng-click="closeAllManModal()" class="button button-clear">返回</button>
+    <h1 class="title">响应者详情</h1>
+  </ion-header-bar>
+  <ion-content id="order-responser" class="stable-bg">
+    <div class="list">
+      <div class="item item-thumbnail-left assertive-bg light border0">
+        <img ng-src="./img/hotman-1.png" >
+        <h2 class="light">昵称：高圆圆</h2>
+        <h4 class="light">级别：超级</h4>
+      </div>
+      <div class="item">
+        <div class="button-bar">
+          <button class="button button-clear button-assertive" ng-click="slideHasChanged(0)"
+                  ng-class="{'active': allDetailOpt.slideIndex!=0}">基本信息</button>
+          <button class="button button-clear button-assertive" ng-click="slideHasChanged(1)"
+                  ng-class="{'active': allDetailOpt.slideIndex!=1}">从业经验</button>
+        </div>
+        <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+          <ion-slide>
+            <div class="box blue">
+              <br> <br> <h1>基本信息</h1><br>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="box yellow">
+              <br> <br> <h1>从业经验</h1><br>
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+    </div>
+    <div class="margin20-top button-bar">
+      <button class="button button-energized">还剩 22 分钟</button>
+      <button class="button button-positive">确定是他</button>
+    </div>
+  </ion-content>
+</ion-modal-view>

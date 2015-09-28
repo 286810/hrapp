@@ -1,0 +1,94 @@
+<ion-view view-title="选择区域、医院、药店">
+  <ion-content id="hospitalist" class="has-footer">
+
+    <div class="bar bar-header bar-assertive item-input-inset">
+      <!--<button ng-click="back()" class="button button-clear">返回</button>-->
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" ng-model="city_name" placeholder="">
+      </label>
+    </div>
+
+    <div class="row padding0">
+      <div class="list col-20">
+        <div ng-click="pagerClick(0)" class="item padding5-0 text-center stable-bg" ng-class="{'active': currentSlide==0}">
+          <button class="button button-clear button-dark">南京</button>
+        </div>
+        <div ng-click="pagerClick(1)" class="item padding5-0 text-center stable-bg" ng-class="{'active': currentSlide==1}">
+          <button class="button button-clear button-dark">省份</button>
+        </div>
+        <div class="item padding5-0 text-center stable-bg" ng-class="{'active': currentSlide==2}">
+          <button ng-click="pagerClick(2)" class="button button-clear button-dark">城市</button>
+        </div>
+        <div class="item padding5-0 text-center stable-bg" ng-class="{'active': currentSlide==3}">
+          <button ng-click="pagerClick(3)" class="button button-clear button-dark">区县</button>
+        </div>
+        <div class="item padding5-0 text-center stable-bg" ng-class="{'active': currentSlide==4}">
+          <button ng-click="pagerClick(4)" class="button button-clear button-dark">等级</button>
+        </div>
+        <div ng-click="pagerClick(5)" class="item padding5-0 text-center stable-bg" ng-class="{'active': currentSlide==5}">
+          <button class="button button-clear button-dark">医院</button>
+        </div>
+      </div>
+      <ion-slide-box on-slide-changed="slideChanged($index)" class="col-80" show-pager="false">
+        <ion-slide>
+          <div class="box">
+
+            <ion-checkbox ng-repeat="item in hospitalList" ng-model="item.checked" ng-checked="item.checked" ng-change="changeHospital(item)">
+              {{ item.text }}
+            </ion-checkbox>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box">
+            <ion-list class="">
+              <ion-item ng-if="$index < 100" ng-repeat="item in provinceList | filter:city_name track by $index"
+                        ng-click="showCity(item)" class="border-right0" >
+                {{item}}
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box">
+          <ion-list class="">
+            <ion-item ng-if="$index < 100" ng-repeat="item in ownedCityList | filter:city_name track by $index" class="border-right0"
+                      ng-click="showCounty(item.city_name)" ng-disabled="item.isCounty" >
+              {{item.city_name}}
+            </ion-item>
+          </ion-list>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <ion-list class="">
+            <ion-item ng-if="$index < 100 && item.isCounty" ng-repeat="item in ownedCountyList | filter:city_name track by $index"
+                      ng-click="showLevel(item)" class="border-right0" >
+              {{item.city_name}}
+            </ion-item>
+            <ion-item ng-if="$index < 100 && !item.isCounty" ng-repeat="item in ownedCountyList | filter:city_name track by $index"
+                      ng-click="showLevel(item)" class="border-right0" >
+              {{item}}
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+        <ion-slide>
+          <ion-list class="">
+            <ion-item ng-repeat="item in  levelData" class="border-right0" ng-click="showResult(item)" >
+              {{item}}
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+        <ion-slide>
+          <div class="box"><h1>医院列表</h1></div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+
+  </ion-content>
+  <div class="bar bar-footer bar-assertive">
+    <div class="title">
+      <a href="#/jobinfo" class="button button-clear">已确定 {{hospital.length}} 家医院</a>
+
+    </div>
+  </div>
+</ion-view>

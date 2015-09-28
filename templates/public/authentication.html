@@ -1,0 +1,76 @@
+<ion-view view-title="认证信息">
+  <ion-content id="authentication">
+
+    <form name="authenticForm" class="">
+      <div class="list margin20-top padding">
+
+        <label ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">业务区域</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </label>
+        <label ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">主要科室</span>
+          <input class="text-left disable_input authentic_department" type="text" disabled ng-model="user.authentic_department"
+                 name="authentic_department" required="">
+        </label>
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传身份证</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </div>
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传产品注册证</span>
+          <input class="text-left disable_input authentic_department" type="text" disabled ng-model="user.authentic_department"
+                 name="authentic_department" required="">
+        </div>
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传营业执照、组织机构、税务登记、<br>经营许可、GSP（药品）</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </div><!--
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传组织机构</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </div>
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传税务登记</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </div>
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传经营许可</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </div>
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传GSP（药品）</span>
+          <input class="text-left disable_input authentic_responsible_location" type="text" disabled ng-model="user.authentic_responsible_location"
+                 name="authentic_responsible_location" required="">
+        </div>-->
+        <div ng-click="uploadCard()" class="item item-input">
+          <span class="input-label">上传GMP证书、药检、批件</span>
+          <input class="text-left disable_input authentic_department" type="text" disabled ng-model="user.authentic_department"
+                 name="authentic_department" required="">
+        </div>
+        <!--<div ng-click="select()" class="item item-input">
+          <span class="input-label">上传药检</span>
+          <input class="text-left disable_input authentic_department" type="text" disabled ng-model="user.authentic_department"
+                 name="authentic_department" required="">
+        </div>-->
+        <div id="imgList" class="item item-image">
+          <img id="myImg" width="100" height="100" >
+        </div>
+      </div>
+
+      <button ng-click="finishBasic(employForm)" class="button button-block button-assertive"
+              ng-disabled="authenticForm.$invalid">
+        完成
+      </button>
+      <div class="text-right">
+        <a href="#/tab/home/dynamic" class="button-small button button-clear">跳过</a>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

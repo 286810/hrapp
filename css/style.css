@@ -1,0 +1,326 @@
+.ft-12 {
+  font-size: 12px;
+}
+.ft-66 {
+  font-size: 66px;
+}
+.margin20-top {
+  margin-top: 20px;
+}
+.margin40-top {
+  margin-top: 40px;
+}
+.border0 {
+  border: 0;
+}
+.border-right0 {
+  border-right: 0;
+}
+.padding0 {
+  padding: 0;
+}
+.padding5-0 {
+  padding: 5px 0;
+}
+.relative {
+  position: relative;
+}
+.radio-icon.ion-checkmark {
+  color: #387ef5;
+}
+/*select 靠左显示*/
+.item-select select {
+  right: auto;
+  padding-left: 0;
+}
+/*通用下拉菜单*/
+.drop-content {
+  position: absolute;
+  min-width: 80px;
+  height: 0;
+  overflow: auto;
+  box-shadow: 0 3px 10px #ccc;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.drop-content.active {
+  height: 300px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.drop-content li {
+  height: 50px;
+  border-bottom: 1px solid #f3f3f3;
+  line-height: 30px;
+}
+.drop-content a {
+  text-decoration: none;
+  padding: 10px 0;
+  display: inline-block;
+}
+.drop-menu-ion {
+  transform: rotate(0deg);
+  transition: all .2s;
+}
+.drop-menu-ion.active {
+  transform: rotate(180deg);
+  transition: all .2s;
+}
+.tabs-striped.tabs-color-light .tab-item {
+  color: rgba(255, 255, 255, 1);
+}
+
+/*登录*/
+#login .item, #register .item, #basicinfo .item, #jobinfo .item, #authentication .item, #publish_batch .item,
+#publish_department .item, #publish_heal .item, #publish_other .item {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 1px;
+}
+/*注册*/
+.verifyBtn {
+  left: -50px;
+  width: 100%;
+}
+.inviBtn {
+  position: absolute;
+  right: 18px;
+  top: 9px;
+  z-index: 99;
+}
+.popover {
+  height: 55px;
+}
+/*基本信息*/
+.disable_input[disabled] {
+  background-color: inherit;
+}
+/*医院列表*/
+#hospitalist .item {
+  border-top: 0;
+  border-left: 0;
+  margin-top: 2px;
+}
+#hospitalist .active {
+  background-color: #fff;
+  border-right: 0;
+}
+/*认证*/
+#myImg {
+  width: 100px;
+  height: 100px;
+}
+
+/*首页*/
+ion-tabs i.icon.ion-ios-plus-outline, ion-tabs i.icon.ion-ios-plus {
+  margin-top: 5px;
+  font-size: 36px;
+}
+#home .pane[hide-nav-bar="true"] .has-tabs-top {
+  top: 93px;
+}
+#home-subheader i {
+  font-size: 22px;
+}
+#home-subheader {
+    border: 0;
+    z-index: 99;
+}
+#home-subheader .tab-item.active {
+    /*border-color: #e42012;*/
+}
+.tabs-striped.tabs-color-assertive .tab-item {
+  color: #000;
+}
+
+#home_recommend h3 {
+  font-weight: bold;
+}
+#home_recommend hr {
+  border-top: 1px solid #f1f1f1;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+}
+#home_recommend .item {
+  padding: 5px;
+  margin: 5px 0;
+}
+#home_recommend .item:first-child {
+  border-top: 0;
+}
+#home_recommend h2{
+  font-weight: bold;
+}
+#home_recommend .flag{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  padding-top: 40px;
+}
+.medicines-intro-right .wrap {
+  border-left: 1px solid #f1f1f1;
+}
+.medicines-intro-left, .medicines-intro-right {
+  padding-top: 30px;
+  position: relative;
+}
+.medicines-intro-bottom i {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+}
+#recommend-detail .bar-subheader .button {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 0;
+}
+/*热度红人*/
+#home_hotman .item {
+  border: 0;
+}
+#home_hotman .newHotman {
+  padding: 10px 10px 0;
+}
+#home_hotman .man-item {
+  padding: 5px;
+  position: relative;
+}
+#home_hotman .manInfo  {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: #fff;
+}
+
+/*热度任务*/
+#home-hottask .item-thumbnail-right > img:first-child, #home-hottask .item-thumbnail-right .item-content > img:first-child {
+  position: absolute;
+  top: 30px;
+}
+#home-hottask .price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+}
+
+/*发布任务*/
+.publish_btn i  {
+  display: inline-block;
+  font-size: 30px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
+
+/*资讯*/
+#news-subheader {
+  border: 0;
+  z-index: 99;
+}
+#news-subheader .tab-item.active {
+  border-color: #e42012;
+}
+#news-dynamic .summary {
+  height: 60px;
+  position: relative;
+  white-space: normal;
+}
+#news-dynamic .summary:after {
+  display: inline-block;
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 0 3px;
+}
+#news-dynamic .item.activated .summary:after {
+  background-color: #d9d9d9;
+}
+#dynamic-detail p {
+  text-indent: 28px;
+}
+
+/*发布任务*/
+#publish_batch .tag .item-radio, #publish_department .tag .item-radio {
+  border: 0;
+  width: 50%;
+  float: left;
+}
+#publish_batch .tag .item-content, #publish_department .tag .item-content {
+  padding-right: 0;
+}
+#publish_department .mode label, #publish_batch .mode label, #publish_batch .type label {
+  border: 0;
+}
+
+/*消息*/
+#msg-chat .item {
+  border: 0;
+  padding-bottom: 0;
+}
+#msg-chat .header {
+  border-radius: 25px;
+  max-width: 50px;
+  max-height: 50px;
+}
+#msg-chat .item-thumbnail-left {
+  padding-left: 80px;
+}
+#msg-chat .item-thumbnail-right {
+  padding-right: 80px;
+}
+#msg-chat p {
+  white-space: normal;
+}
+
+/*我的*/
+#my .item-thumbnail-left {
+  border: 0;
+  height: 160px;
+  padding-top: 80px;
+}
+#my .thumbnail {
+  margin-top: 30px;
+}
+#my .item .badge {
+  right: 15px;
+}
+#order-subheader {
+  border: 0;
+  z-index: 99;
+}
+#order-subheader .tab-item.active {
+  border-color: #e42012;
+}
+#allOrder .item-thumbnail-right > img:first-child, #allOrder .item-thumbnail-right .item-content > img:first-child {
+  position: absolute;
+  top: 30px;
+}
+#allOrder .price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+}
+#order-detail .item {
+  margin: 6px 0;
+  border: 0;
+}
+.batch {
+  position: absolute;
+  right: 10px;
+}
+.batch h1 {
+  border-top: 1px solid #ddd;
+}

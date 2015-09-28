@@ -1,0 +1,33 @@
+<ion-modal-view>
+  <ion-content class="stable-bg">
+    <div class="list padding-top margin40-top">
+      <br>
+      <div class="item row border0 stable-bg margin40-top">
+        <a ng-click="publishBatch()" class="publish_btn col-33 text-center">
+          <i class="ion ion-android-arrow-up col assertive-bg light"></i> <br> 上量
+        </a>
+        <a ng-click="publishBatch()" class="publish_btn col-33 text-center">
+          <i class="ion ion-ios-medkit-outline positive-bg light"></i> <br> 进院
+        </a>
+        <a ng-click="publishBatch()" class="publish_btn col-33 text-center">
+          <i class="ion ion-ios-list-outline calm-bg light"></i> <br> 提单
+        </a>
+      </div>
+      <br>
+      <div class="item row border0 stable-bg margin20-top">
+        <a ng-click="publishDepartment()" class="publish_btn col-33 text-center">
+          <i class="ion ion-ios-clock-outline balanced-bg light"></i> <br> 科室会
+        </a>
+        <a ng-click="publishHeal()" class="publish_btn col-33 text-center">
+          <i class="ion ion-model-s energized-bg light"></i> <br> 江湖救急
+        </a>
+        <a ng-click="publishOther()" class="publish_btn col-33 text-center">
+          <i class="ion ion-ios-more-outline royal-bg light"></i> <br> 其他
+        </a>
+      </div>
+    </div>
+    <br>
+    <button ng-click="cancelPublish()" class="button button-full button-clear button-assertive margin40-top">取消</button>
+
+  </ion-content>
+</ion-modal-view>

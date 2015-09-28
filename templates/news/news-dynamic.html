@@ -1,0 +1,18 @@
+<ion-view view-title="资讯">
+
+    <ion-content class="has-footer">
+        <div id="news-dynamic" class="list">
+            <a class="item item-thumbnail-right" ng-repeat="item in dynamicItems" href="#/tab/news/dynamic/{{item.id}}">
+                <img ng-src="{{item.src}}">
+
+                <p class="summary">
+                    {{item.summary}}
+                </p>
+
+                <p class="text-right">
+                  <span class="item-note ft-12">发布时间{{item.time}}</span>
+                </p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

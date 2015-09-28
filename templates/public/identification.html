@@ -1,0 +1,30 @@
+<ion-view view-title="身份确认">
+  <ion-content>
+    <div class="margin40-top text-center">
+      <h3>请确认您的身份</h3>
+    </div>
+
+    <div class="list margin40-top">
+      <ion-radio ng-repeat="item in identityList" ng-value="item.value" ng-model="identity.type" >{{item.text}}</ion-radio>
+
+      <div class="margin20-top">
+        <button ng-click="openIdentityPopover()" class="button button-clear button-positive">如何定义代理商？</button>
+        <button class="button button-clear button-positive">如何定义直销人员？</button>
+
+      </div>
+    </div>
+
+    <div class="margin20-top padding">
+      <a href="#/basicinfo" class="button button-block button-assertive">下一步</a>
+    </div>
+  </ion-content>
+</ion-view>
+
+
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-content>
+      代理商就是代理商
+    </ion-content>
+  </ion-popover-view>
+</script>

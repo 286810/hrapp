@@ -1,0 +1,51 @@
+<ion-view view-title="基本信息">
+  <ion-content id="basicinfo">
+
+    <form name="basicForm" class="padding">
+      <div class="text-center">
+        <span class="ion ion-ios-person stable ft-66"></span>
+        <div class="ft-12">点击上传头像 </div>
+      </div>
+      <div class="list">
+        <div ng-click="selectCity()" class="item item-input">
+          <span class="input-label">所在城市</span>
+          <input class="text-left disable_input city_name" type="text" disabled ng-model="user.city_name"
+                 name="city_name" placeholder="请输入城市名快速搜索" required="">
+        </div>
+        <label class="item item-input">
+          <span class="input-label">真实姓名</span>
+          <input type="text" name="realname" ng-model="user.realname" required>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span>
+          <select>
+            <option selected>男</option>
+            <option>女</option>
+          </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日</span>
+          <input type="date" name="birthday" ng-model="user.birthday" required="">
+        </label>
+        <div class="relative">
+          <label class="item item-input">
+            <span class="input-label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span>
+            <input type="email" name="email" ng-model="user.email" required="">
+          </label>
+        </div>
+
+      </div>
+
+      <p class="text-center">
+        信息完善度<span ng-if="basicForm.$valid">50</span><span ng-if="!basicForm.$valid">30</span>%
+      </p>
+      <button ng-click="finishBasic(basicForm)" class="button button-block button-assertive"
+              ng-disabled="basicForm.$invalid">
+        下一步
+      </button>
+      <div class="text-right">
+        <a href="#/jobinfo" class="button-small button button-clear">跳过</a>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

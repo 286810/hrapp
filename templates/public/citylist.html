@@ -1,0 +1,18 @@
+<ion-view view-title="选择城市">
+  <ion-content>
+
+    <div class="bar bar-header bar-assertive item-input-inset">
+      <!--<button ng-click="back()" class="button button-clear">返回</button>-->
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" ng-model="city_name" placeholder="">
+      </label>
+    </div>
+    <ion-list class="margin40-top">
+      <ion-item ng-if="$index < 100 && $index > 0" ng-repeat="item in cityList | filter:city_name track by $index" ng-click="a()" >
+        {{item}}
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

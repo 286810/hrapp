@@ -1,0 +1,55 @@
+<ion-view view-title="注册">
+  <ion-content id="register">
+    <form name="registerForm" class="margin40-top padding">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">昵&nbsp;&nbsp;&nbsp;&nbsp;称</span>
+          <input type="text" name="nickname" ng-model="user.nickname" required="">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">手机号</span>
+          <input type="number" name="phone" ng-model="user.phone" ng-maxlength="11" ng-minlength="10"
+                 ng-pattern="/^1[3-9]{1}[0-9]{9}$/" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">验证码</span>
+          <input type="number" name="verifyCode" ng-model="user.verifyCode" required="">
+
+          <button class="button button-small button-clear button-positive verifyBtn">
+            获取验证码
+          </button>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">密&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+          <input type="password" name="password" ng-model="user.password" required="">
+        </label>
+        <div class="relative">
+          <label class="item item-input">
+            <span class="input-label">邀请码</span>
+            <input type="text" name="inviCode" ng-model="user.inviCode" required="">
+          </label>
+          <button on-touch="openPopover($event)" class="button button-small button-clear button-positive inviBtn">
+            什么是邀请码
+          </button>
+        </div>
+
+      </div>
+
+      <button ng-click="register(registerForm)" class="button button-block button-assertive"
+              ng-disabled="registerForm.$invalid || !user.checked">
+        注册
+      </button>
+      <div class="padding text-center">
+        <a href="#/login" class="button button-clear ft-12">已有帐号？<span class="positive">点击登录</span></a>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+
+<!--<script id="inviCode-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-content>
+      邀请码是邀请码邀请码是邀请码
+    </ion-content>
+  </ion-popover-view>
+</script>-->

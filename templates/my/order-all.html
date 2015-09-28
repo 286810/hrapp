@@ -1,0 +1,43 @@
+<ion-view view-title="全部订单">
+
+  <ion-content id="allOrder" class="has-footer">
+    <!--<ion-list show-delete="true"
+              can-swipe="true">
+      <ion-item ng-repeat="item in items"
+                class="item-thumbnail-right item-remove-animate">
+
+        <img ng-src="{{item.img}}">
+        <h2>item</h2>
+        <p>{{item.description}}</p>
+        <ion-option-button class="button-positive" ng-click="share(item)">
+          Share
+        </ion-option-button>
+
+      </ion-item>
+    </ion-list>-->
+    <ion-list ng-controller="MyCtrl" can-swipe="listCanSwipe">
+      <ion-item ng-repeat="item in items" class="item-thumbnail-right" ng-click="showOrderDetail(item.id)">
+
+        <img ng-src="./img/ionic.png">
+        <h2 class="price assertive text-center">￥3000</h2>
+        <p class="padding-top">
+          <span class="dark">产品名称：阿莫西林{{item.id}}</span>
+        </p>
+        <p>
+          <span class="dark">发&nbsp;&nbsp;布&nbsp;&nbsp;者：阿莫</span>
+        </p>
+        <p>
+          <span class="dark">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：进行中</span>
+        </p>
+        <p>
+          <span class="dark">开始时间：2015-3-15</span>
+        </p>
+        <ion-option-button class="button-assertive" ng-click="onItemDelete(item)">
+          删除
+        </ion-option-button>
+
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll ng-if="isMoreData" on-infinite="loadMore()" spinner="circles" ></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
